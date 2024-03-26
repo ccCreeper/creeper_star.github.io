@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实验报告</title>
+<style>
+    body {
+        background-image: url('1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff; /* 字体颜色改为白色 */
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    h1, h2 {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #fff; /* 标题字体颜色也改为白色 */
+    }
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        background-color: #add8e6; /* 隐藏框颜色改为浅蓝色 */
+        color: #333; /* 内容字体颜色为深灰色 */
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .report-section.active .content {
+        max-height: 1000px; /* 设置足够大的值来确保内容可以展开 */
+    }
+</style>
+</head>
+<body>
+<div class="fixed-content">
+    <div>学号:202100130010</div>
+    <div>姓名:陈前</div>
+    <div>班级:智能21</div>
+</div>
+<h1>实验题目: 利用主流云平台搭建个人博客或网站</h1>
+<h2>实验日期: 3/22</h2>
 
+<div class="report-section">
+    <h2 onclick="toggleContent(this)">实验目的: （点击展开）</h2>
+    <div class="content">
+        <p>熟悉使用主流云平台并搭建个人博客或者网站。</p>
+        <p>参考方案：</p>
+        <p>基于主流云平台，设计、实现个人博客或者网站的搭建，撰写实验报告（附带网站链接并可以访问），并在网站上呈现此次实验报告。</p>
+    </div>
+</div>
+
+<div class="report-section">
+    <h2 onclick="toggleContent(this)">实验步骤: （点击展开）</h2>
+    <div class="content">
+        <p>1.选择云平台与域名注册：</p>
+        <p>  首先，我选择了GitHub作为本次实验的云平台。GitHub不仅提供了免费的代码托管服务，还支持通过GitHub Pages快速搭建静态网站。随后，我在GitHub上创建了一个HTML类型文件作为我的主页，以便更好地展示我的个人博客。</p>
+        <p>2.搭建网页框架：</p>
+        <p>  利用HTML、CSS和JavaScript等前端技术，设计了博客的主页面和实验报告页面。主页面包含了博客的标题、导航栏、标语等基本内容，实验报告页面则用于展示实验的具体内容。</p>
+        <p>3.实现页面跳转功能：</p>
+        <p>  通过HTML中的锚点链接（Anchor Link）和JavaScript的跳转函数，实现了从主页面到实验报告页面的跳转功能。用户点击导航栏中的“实验报告”链接后，页面将自动跳转到实验报告页面。</p>
+        <p>4.上传代码至GitHub仓库：</p>
+        <p>  将编写好的HTML、CSS和JavaScript文件，以及代码调用需要的jpg类型文件上传至GitHub仓库的对应文件夹中，并修改文件名称，使各界面主次分明、结构清晰，并保证代码的调用不出问题。</p>
+        <p>5.配置GitHub Pages：</p>
+        <p>  在GitHub仓库的设置中，开启GitHub Pages功能，并选择正确的分支和文件夹作为网站的源文件。配置完成后，GitHub会自动生成一个可访问的网站链接。</p>
+        <p>6.测试与发布：</p>
+        <p>  通过浏览器访问生成的网站链接，测试页面的显示效果和跳转功能是否正常。经过测试，页面可以完整显示，且跳转和页面展开也很流畅。</p>
+    </div>
+</div>
+
+<div class="report-section">
+    <h2 onclick="toggleContent(this)">结论分析与体会: （点击展开）</h2>
+    <div class="content">
+        <p>  通过本次实验，我成功地搭建了自己的个人博客网站，并实现了主页面到实验报告页面的跳转功能。这一过程中，我不仅熟悉了GitHub等主流云平台的使用，还掌握了网页开发的基本技能。</p>
+        <p>  在实验过程中，我遇到了一些问题，如跳转页面被GitHub错误锁定为主页面、跳转功能失效等。通过查阅相关资料和反复调试，我逐渐解决了这些问题，并提高了自己的问题解决能力。</p>
+        <p>  未来，我将继续深入学习网页开发和云服务的相关知识，不断优化和完善我的个人博客网站，将其打造成一个展示自己学习和实践成果的平台。</p>
+    </div>
+</div>
+
+<script>
+function toggleContent(header) {
+    var content = header.nextElementSibling;
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+}
+</script>
+</body>
+</html>
