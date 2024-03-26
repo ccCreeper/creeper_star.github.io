@@ -13,12 +13,42 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .star {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid gold; /* 金色星星 */
+        cursor: pointer; /* 鼠标悬停时变为可点击状态 */
+    }
+    .star-top-left {
+        top: 20px;
+        left: 20px;
+        transform: rotate(-35deg);
+    }
+    .star-top-right {
+        top: 20px;
+        right: 20px;
+        transform: rotate(145deg);
+    }
+    .star-bottom-left {
+        bottom: 20px;
+        left: 20px;
+        transform: rotate(-35deg);
+    }
+    .star-bottom-right {
+        bottom: 20px;
+        right: 20px;
+        transform: rotate(145deg);
+    }
     .container {
+        position: relative;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
         text-align: center;
         color: #fff; /* 根据背景图片调整文字颜色 */
     }
@@ -27,7 +57,7 @@
         padding: 10px 20px;
         font-size: 16px;
         color: #fff;
-        background-color: #007BFF; /* 蓝色按钮 */
+        background-color: #007BFF;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -35,7 +65,7 @@
         margin-top: 20px;
     }
     .button:hover {
-        background-color: #0056b3; /* 鼠标悬停时的颜色 */
+        background-color: #0056b3;
     }
 </style>
 </head>
@@ -43,7 +73,14 @@
 <div class="container">
     <h1>欢迎来到我的个人博客</h1>
     <p>这里是我的个人空间，分享我的思考和见解。</p>
-    <a href="paper.html" class="button">我的实验报告</a> <!-- 跳转按钮，请替换为实际URL -->
+    <a href="paper.html" class="button">我的实验报告</a>
 </div>
+
+<!-- 四个角的星星 -->
+<div class="star star-top-left" onclick="window.location.href='star.html';"></div>
+<div class="star star-top-right" onclick="window.location.href='star.html';"></div>
+<div class="star star-bottom-left" onclick="window.location.href='star.html';"></div>
+<div class="star star-bottom-right" onclick="window.location.href='star.html';"></div>
+
 </body>
 </html>
